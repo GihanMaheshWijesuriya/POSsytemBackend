@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="661c41fe-a326-476d-9d61-860184f2e214" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_dbcp2_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/OrderDetailServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/OrderServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/artifacts/poBackend_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/dbcp.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/libraries/dbcp1.xml" beforeDir="false" />
@@ -16,17 +16,7 @@
       <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/POSbackend_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/POSbackend_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POSbackend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/POSbackend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/AuthServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/IsAuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/IsAuthServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/ItemServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/ItemServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/LogOutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/LogOutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/TestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/servlet/TestServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../POSsytemBackend.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,8 +27,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -96,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/ItemServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1261">
-              <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+            <state relative-caret-position="338">
+              <caret line="108" column="9" lean-forward="true" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,8 +100,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/CustomerServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="144" column="9" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
+            <state relative-caret-position="414">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/OrderDetailServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="45" column="65" lean-forward="true" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/OrderServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-28">
+              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,6 +134,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -136,6 +156,8 @@
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/servlet/AuthFilter.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/servlet/CustomerServlet.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/servlet/ItemServlet.java" />
+        <option value="$PROJECT_DIR$/src/lk/ijse/pos/servlet/OrderDetailServlet.java" />
+        <option value="$PROJECT_DIR$/src/lk/ijse/pos/servlet/OrderServlet.java" />
       </list>
     </option>
   </component>
@@ -146,9 +168,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-16" />
-    <option name="y" value="32" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-30" />
+    <option name="y" value="77" />
     <option name="width" value="1279" />
     <option name="height" value="696" />
   </component>
@@ -300,17 +322,25 @@
       <updated>1561092096232</updated>
       <workItem from="1561092102726" duration="77000" />
       <workItem from="1561096983194" duration="18855000" />
-      <workItem from="1561163867261" duration="10870000" />
+      <workItem from="1561163867261" duration="16279000" />
     </task>
+    <task id="LOCAL-00001" summary="implement item crud operations">
+      <created>1561177781261</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561177781261</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29802000" />
+    <option name="totallyTimeSpent" value="35211000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-16" y="32" width="1279" height="696" extended-state="0" />
+    <frame x="189" y="72" width="1279" height="696" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16078754" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20754717" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -320,7 +350,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19360569" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.75133216" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38297874" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -346,6 +376,12 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implement item crud operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement item crud operations" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/AuthServlet.java">
@@ -390,20 +426,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/CustomerServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/ItemServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="144" column="9" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
+        <state relative-caret-position="338">
+          <caret line="108" column="9" lean-forward="true" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/ItemServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/OrderDetailServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1261">
-          <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+        <state relative-caret-position="312">
+          <caret line="45" column="65" lean-forward="true" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/CustomerServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/servlet/OrderServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
