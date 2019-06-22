@@ -1,4 +1,4 @@
-package lk.ijse.absd.servlet;
+package lk.ijse.pos.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

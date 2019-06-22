@@ -1,4 +1,4 @@
-package lk.ijse.absd.servlet;
+package lk.ijse.pos.servlet;
 
 import javax.annotation.Resource;
 import javax.json.Json;
@@ -10,7 +10,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,7 +23,7 @@ public class CustomerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        System.out.println("Do Get Workionh");
         try (PrintWriter out = resp.getWriter()) {
 
             resp.setContentType("application/json");
@@ -37,8 +36,8 @@ public class CustomerServlet extends HttpServlet {
 
                 JsonArrayBuilder customers = Json.createArrayBuilder();
 
-                while (rst.next()){
-                    String id = rst.getInteger("cusid");
+                while (rst.next()) {
+                    int id = rst.getInt("cusid");
                     String firstname = rst.getString("cusfirstname");
                     String lastname = rst.getString("cuslastname");
                     String email = rst.getString("cusemail");
@@ -48,9 +47,9 @@ public class CustomerServlet extends HttpServlet {
                     JsonObject customer = Json.createObjectBuilder().add("cusid", id)
                             .add("cusfirstname", firstname)
                             .add("cuslastname", lastname)
-                            .add("email", cusemail)
-                            .add("password", cuspassword)
-                            .add("phonenumber", cusphonenum)
+                            .add("cusemail", email)
+                            .add("cuspassword", password)
+                            .add("cusphonenum", phonenumber)
                             .build();
                     customers.add(customer);
                 }
@@ -92,24 +91,111 @@ public class CustomerServlet extends HttpServlet {
             pstm.setObject(3, email);
             pstm.setObject(4, password);
             pstm.setObject(5, phonenumber);
-            boolean result = pstm.executeUpdate()>0;
+            boolean result = pstm.executeUpdate() > 0;
 
-            if (result){
+            if (result) {
                 out.println("true");
-            }else{
+            } else {
                 out.println("false");
             }
 
-        }catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
             out.println("false");
-        }finally {
+        } finally {
             try {
                 connection.close();
-            }catch (SQLException e){
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
             out.close();
+        }
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        super.doDelete(req, resp);
+        PrintWriter out = resp.getWriter();
+        System.out.println("Delete working");
+        String id = req.getParameter("cusid");
+        int cusid = Integer.parseInt(id);
+
+        if (cusid > 0) {
+            try {
+                Connection connection = ds.getConnection();
+                PreparedStatement pstm = connection.prepareStatement("DELETE FROM Customer WHERE cusid=?");
+                pstm.setObject(1, cusid);
+                int doExecute = pstm.executeUpdate();
+                if (doExecute > 0) {
+                    resp.setStatus(HttpServletResponse.SC_ACCEPTED);
+                } else {
+                    resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                }
+
+            } catch (Exception ex) {
+                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                ex.printStackTrace();
+            }
+            out.println("true");
+        } else {
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            out.println("false");
+        }
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        super.doPut(req, resp);
+        PrintWriter out = resp.getWriter();
+        System.out.println("Update working...");
+
+        JsonReader reader = Json.createReader(req.getReader());
+        JsonObject cus = reader.readObject();
+        System.out.println(cus);
+//        System.out.println(cus.getString("cusid"));
+//        int cusID = Integer.parseInt(cus.getString("cusid"));
+
+        if (cus.getInt("cusid") > 0) {
+            try {
+                String firstnamecus = cus.getString("cusfirstname");
+                String lastnamecus = cus.getString("cuslastname");
+                String cusemailcus = cus.getString("cusemail");
+                String cuspasswordcus = cus.getString("cuspassword");
+                String cusphonecus = cus.getString("cusphonenum");
+                int idcus = cus.getInt("cusid");
+
+                System.out.println(idcus + "id");
+                System.out.println(firstnamecus + "first");
+                System.out.println(lastnamecus + "last");
+                System.out.println(cusemailcus + "email");
+                System.out.println(cuspasswordcus + "pass");
+                System.out.println(cusphonecus + "phone");
+
+                Connection connection = ds.getConnection();
+                PreparedStatement pstm = connection.prepareStatement("UPDATE customer set cusfirstname =?,cuslastname =?,cusemail =?" +
+                        ",cuspassword =?,cusphonenum =? WHERE cusid=?");
+                pstm.setObject(1, firstnamecus);
+                pstm.setObject(2, lastnamecus);
+                pstm.setObject(3, cusemailcus);
+                pstm.setObject(4, cuspasswordcus);
+                pstm.setObject(5, cusphonecus);
+                pstm.setObject(6, idcus);
+
+                int doExecute = pstm.executeUpdate();
+                if (doExecute > 0) {
+                    resp.setStatus(HttpServletResponse.SC_ACCEPTED);
+                } else {
+                    resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                }
+
+            } catch (Exception ex) {
+                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                ex.printStackTrace();
+            }
+            out.println("true");
+        } else {
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            out.println("false");
         }
     }
 }

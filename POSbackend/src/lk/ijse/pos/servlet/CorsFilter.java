@@ -1,4 +1,4 @@
-package lk.ijse.absd.servlet;
+package lk.ijse.pos.servlet;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
